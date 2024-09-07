@@ -3,188 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everth Vargas - Innovative Software Developer</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <title>Everth Vargas - Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #f5f7f9;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #004080 0%, #003366 100%);
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1496745470235-fd17d045ab2b') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
         }
         .glass-effect {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(15px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
         }
         .skill-bar {
-            height: 12px;
-            background: #e0e0e0;
-            border-radius: 6px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
             overflow: hidden;
+            margin: 5px 0;
         }
         .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #004080, #003366);
-            border-radius: 6px;
-            transition: width 1s ease-in-out;
+            background-color: #007bff;
+            height: 20px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
         }
-        .animated-bg {
-            background: linear-gradient(-45deg, #0056b3, #003d79, #004080, #003366);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+        footer {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
         }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .card-header {
-            border-bottom: 1px solid #e0e0e0;
-            padding: 16px;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #003366;
+        .text-primary {
+            color: #007bff !important;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-        <a class="navbar-brand text-blue-800 font-weight-bold" href="#">EV</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-gray-700 hover:text-blue-700" href="#about">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-gray-700 hover:text-blue-700" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-gray-700 hover:text-blue-700" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-gray-700 hover:text-blue-700" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-gray-700 hover:text-blue-700" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Header -->
-    <header id="about" class="pt-5 gradient-bg text-white min-vh-100 d-flex align-items-center">
-        <div class="container text-center text-md-left">
-            <div class="row">
-                <div class="col-md-6 mb-4 d-flex justify-content-center">
-                    <img src="Foto%20Everth%20vargas.png" alt="Everth Vargas" class="rounded-circle border-4 border-white shadow-lg" style="width: 250px; height: 250px; object-fit: cover;">
-                </div>
-                <div class="col-md-6">
-                    <h1 class="display-4 font-weight-bold">EVERTH VARGAS</h1>
-                    <h2 class="display-5 mb-4">Innovative Software Developer</h2>
-                    <p class="lead mb-4">Passionate about creating technological solutions that drive the future. Specialized in Android and web development, with a focus on innovation and technical excellence.</p>
-                    <a href="#contact" class="btn btn-light btn-lg mr-2">Contact Me</a>
-                    <a href="#portfolio" class="btn btn-outline-light btn-lg">View Portfolio</a>
-                </div>
-            </div>
-        </div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Everth Vargas</h1>
+        <p>Software Developer | Tech Enthusiast | Lifelong Learner</p>
     </header>
 
     <!-- Main Content -->
     <main class="container my-5">
-        <section id="experience" class="mb-5">
-            <h2 class="text-center text-primary font-weight-bold mb-4">Professional Experience</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card glass-effect">
-                        <div class="card-header">Mobile Application Developer</div>
-                        <div class="card-body">
-                            <p class="text-muted">Personal Project | 05/2024 – Present</p>
-                            <p>Design and development of an innovative e-commerce application using the latest Android technologies.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check-circle text-primary"></i> Implementation of MVVM architecture for a scalable and maintainable code structure.</li>
-                                <li><i class="fas fa-check-circle text-primary"></i> Integration of Firebase for user authentication and real-time storage.</li>
-                                <li><i class="fas fa-check-circle text-primary"></i> Performance optimization of the app, achieving 40% faster loading times.</li>
-                            </ul>
-                            <div class="d-flex flex-wrap">
-                                <span class="badge badge-primary mr-2 mb-2">Kotlin</span>
-                                <span class="badge badge-primary mr-2 mb-2">Android SDK</span>
-                                <span class="badge badge-primary mr-2 mb-2">Firebase</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                    <div class="card glass-effect">
-                        <div class="card-header">Web Developer</div>
-                        <div class="card-body">
-                            <p class="text-muted">Personal Project | 07/2024 - 07/2024</p>
-                            <p>Development of a robust CRUD system for efficient user management, demonstrating full-stack skills.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check-circle text-primary"></i> Implementation of an intuitive and responsive user interface using modern front-end technologies.</li>
-                                <li><i class="fas fa-check-circle text-primary"></i> Development of a RESTful API for secure and efficient CRUD operations.</li>
-                                <li><i class="fas fa-check-circle text-primary"></i> Integration of an image upload system with validation and automatic optimization.</li>
-                            </ul>
-                            <div class="d-flex flex-wrap">
-                                <span class="badge badge-primary mr-2 mb-2">PHP</span>
-                                <span class="badge badge-primary mr-2 mb-2">JavaScript</span>
-                                <span class="badge badge-primary mr-2 mb-2">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
+        <!-- About Me -->
+        <section id="about" class="mb-5">
+            <h2 class="text-center text-primary font-weight-bold mb-4">About Me</h2>
+            <div class="card glass-effect">
+                <div class="card-body">
+                    <p>Hello! I'm Everth Vargas, a passionate software developer with a strong background in Android development and a keen interest in web technologies. I love solving complex problems and continuously learning new things.</p>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="mb-5">
-            <h2 class="text-center text-primary font-weight-bold mb-4">Education</h2>
+        <!-- Experience -->
+        <section id="experience" class="mb-5">
+            <h2 class="text-center text-primary font-weight-bold mb-4">Experience</h2>
             <div class="card glass-effect">
-                <div class="card-header">Software Development Program</div>
                 <div class="card-body">
-                    <p class="text-muted">Instituto Superior Villa del Rosario | 2022 - 2024</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check-circle text-primary"></i> Comprehensive training in software development with a focus on mobile and web applications.</li>
-                        <li><i class="fas fa-check-circle text-primary"></i> Participation in collaborative projects and professional internships.</li>
+                    <h3>Software Developer at TechCorp</h3>
+                    <p><strong>June 2021 - Present</strong></p>
+                    <ul>
+                        <li>Developed and maintained Android applications using Kotlin and Java.</li>
+                        <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                        <li>Optimized performance and fixed bugs to ensure smooth user experience.</li>
+                    </ul>
+                    <h3>Junior Developer at WebSolutions</h3>
+                    <p><strong>January 2019 - May 2021</strong></p>
+                    <ul>
+                        <li>Assisted in the development of web applications using HTML, CSS, and JavaScript.</li>
+                        <li>Worked on UI/UX design improvements and user feedback analysis.</li>
+                        <li>Participated in code reviews and team meetings to enhance overall project quality.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- Education -->
+        <section id="education" class="mb-5">
+            <h2 class="text-center text-primary font-weight-bold mb-4">Education</h2>
+            <div class="card glass-effect">
+                <div class="card-body">
+                    <h3>Bachelor's in Computer Science</h3>
+                    <p><strong>University of Technology</strong></p>
+                    <p>Graduated with honors in 2018. Focused on software engineering and mobile app development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
         <section id="skills" class="mb-5">
             <h2 class="text-center text-primary font-weight-bold mb-4">Skills</h2>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <h3 class="font-weight-bold mb-3">Technical Skills</h3>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%;"></div>
+                        <div class="skill-progress" style="width: 80%;">80%</div>
                     </div>
                     <p class="text-muted mt-2">Android Development</p>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%;"></div>
+                        <div class="skill-progress" style="width: 70%;">70%</div>
                     </div>
                     <p class="text-muted mt-2">Web Development</p>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 60%;"></div>
+                        <div class="skill-progress" style="width: 60%;">60%</div>
                     </div>
                     <p class="text-muted mt-2">UI/UX Design</p>
                 </div>
@@ -201,6 +142,7 @@
             </div>
         </section>
 
+        <!-- Contact -->
         <section id="contact" class="mb-5">
             <h2 class="text-center text-primary font-weight-bold mb-4">Contact</h2>
             <div class="card glass-effect">
@@ -214,6 +156,14 @@
                 </div>
             </div>
         </section>
+
+        <!-- Additional Section for Snake Game -->
+        <section id="snake-game" class="mb-5 text-center">
+            <h2 class="text-primary font-weight-bold mb-4">Snake Game</h2>
+            <p align="center">
+                <img src="https://github.com/7oSkaaa/7oSkaaa/blob/output/github-contribution-grid-snake.svg" alt="Snake Game"/>
+            </p>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -223,7 +173,7 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
