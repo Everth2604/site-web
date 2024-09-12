@@ -9,12 +9,10 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    
+    <!-- Custom CSS -->
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -37,11 +35,15 @@
             background: #e0e0e0;
             border-radius: 6px;
             overflow: hidden;
+            position: relative;
         }
         .skill-progress {
             height: 100%;
             background: linear-gradient(90deg, #004080, #003366);
             border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 0;
             transition: width 1s ease-in-out;
         }
         .animated-bg {
@@ -85,9 +87,6 @@
                     <a class="nav-link text-gray-700 hover:text-blue-700" href="#skills">Habilidades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-gray-700 hover:text-blue-700" href="#portfolio">Portafolio</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link text-gray-700 hover:text-blue-700" href="#contact">Contacto</a>
                 </li>
             </ul>
@@ -99,14 +98,14 @@
         <div class="container text-center text-md-left">
             <div class="row">
                 <div class="col-md-6 mb-4 d-flex justify-content-center">
-                    <img src="Foto%20Everth%20vargas.png" alt="Everth Vargas" class="rounded-circle border-4 border-white shadow-lg" style="width: 250px; height: 250px; object-fit: cover;">
+                    <img src="Foto%20Everth%20vargas.png" alt="Foto de Everth Vargas, Desarrollador de Software" class="rounded-circle border-4 border-white shadow-lg" style="width: 250px; height: 250px; object-fit: cover;">
                 </div>
                 <div class="col-md-6">
                     <h1 class="display-4 font-weight-bold">EVERTH VARGAS</h1>
                     <h2 class="display-5 mb-4">Desarrollador de Software Innovador</h2>
                     <p class="lead mb-4">Apasionado por crear soluciones tecnológicas que impulsen el futuro. Especializado en desarrollo Android y web, con un enfoque en la innovación y la excelencia técnica.</p>
                     <a href="#contact" class="btn btn-light btn-lg mr-2">Contáctame</a>
-                    <a href="#portfolio" class="btn btn-outline-light btn-lg">Ver Portfolio</a>
+                    <a href="#portfolio" class="btn btn-outline-light btn-lg">Ver Portafolio</a>
                 </div>
             </div>
         </div>
@@ -164,48 +163,65 @@
             <div class="card glass-effect">
                 <div class="card-header">PTS EN DESARROLLO DE SOFTWARE</div>
                 <div class="card-body">
-                    <p class="text-muted">Centro de Estudios Tecnológicos | 01/2023 – 12/2024</p>
-                    <p>Curso intensivo en desarrollo de software con enfoque en tecnologías móviles y web. Incluye módulos sobre desarrollo ágil, diseño de interfaces y programación avanzada.</p>
+                    <p class="text-muted">Universidad Nacional de Córdoba | 2018 - 2023</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary"></i> Capacitación integral en desarrollo de software con enfoque en tecnologías actuales.</li>
+                        <li><i class="fas fa-check-circle text-primary"></i> Proyectos prácticos que abarcan desde el desarrollo front-end hasta la gestión de bases de datos.</li>
+                        <li><i class="fas fa-check-circle text-primary"></i> Participación en proyectos colaborativos y prácticas profesionales.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="mb-5">
-            <h2 class="text-center text-primary font-weight-bold mb-4">Habilidades</h2>
+            <h2 class="text-center text-primary font-weight-bold mb-4">Habilidades y Competencias</h2>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card glass-effect">
-                        <div class="card-header">Desarrollo de Aplicaciones Móviles</div>
+                        <div class="card-header">Habilidades Técnicas</div>
                         <div class="card-body">
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Desarrollo Android</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
                             </div>
-                            <p class="text-muted">Experiencia en desarrollo de aplicaciones nativas y multiplataforma, utilizando Kotlin, Android SDK, y Flutter.</p>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Desarrollo Web</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>UI/UX Design</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 mb-4">
                     <div class="card glass-effect">
-                        <div class="card-header">Desarrollo Web</div>
+                        <div class="card-header">Competencias Profesionales</div>
                         <div class="card-body">
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%;"></div>
-                            </div>
-                            <p class="text-muted">Habilidades en creación de interfaces web responsivas y funcionales con HTML, CSS, JavaScript y frameworks modernos.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-primary"></i> Comunicación efectiva</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Adaptabilidad y aprendizaje rápido</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Resolución creativa de problemas</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Trabajo en equipo y colaboración</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Gestión eficiente del tiempo</li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="mb-5">
-            <h2 class="text-center text-primary font-weight-bold mb-4">Portafolio</h2>
-            <div class="card glass-effect">
-                <div class="card-body">
-                    <p class="text-muted">Explora mis proyectos más recientes y mi trabajo en <a href="https://github.com/Everth2604" target="_blank" class="text-primary">GitHub</a>.</p>
-                    <div class="d-flex flex-column align-items-center">
-                        <a href="https://github.com/tu-perfil" target="_blank" class="btn btn-primary btn-lg mt-3">Ver en GitHub</a>
                     </div>
                 </div>
             </div>
@@ -215,25 +231,66 @@
             <h2 class="text-center text-primary font-weight-bold mb-4">Contacto</h2>
             <div class="card glass-effect">
                 <div class="card-body">
-                    <p class="text-muted">Estoy disponible para colaborar en nuevos proyectos. No dudes en contactarme:</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope text-primary"></i> <a href="mailto:everth2604@gmail.com" class="text-muted">tu-email@ejemplo.com</a></li>
-                        <li><i class="fas fa-linkedin text-primary"></i> <a href="https://www.linkedin.com/in/everth-jesus-vargas-guzman-236470326/" target="_blank" class="text-muted">LinkedIn</a></li>
-                        <li><i class="fas fa-github text-primary"></i> <a href="https://github.com/Everth2604" target="_blank" class="text-muted">GitHub</a></li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <h3 class="font-weight-semibold mb-3">Información de Contacto</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-phone-alt text-primary mr-2"></i> <a href="https://wa.me/543573451901" class="text-primary">+54-3573451901</a></li>
+                                <li><i class="fas fa-envelope text-primary mr-2"></i> <a href="mailto:Everth2604@gmail.com" class="text-primary">Everth2604@gmail.com</a></li>
+                                <li><i class="fas fa-map-marker-alt text-primary mr-2"></i> Cordoba, Villa del Rosario</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h3 class="font-weight-semibold mb-3">Redes Sociales</h3>
+                            <div class="d-flex">
+                                <a href="https://www.linkedin.com/in/everth-jesus-vargas-guzman-236470326/" class="text-primary mr-3" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="https://github.com/Everth2604" class="text-primary" aria-label="GitHub"><i class="fab fa-github fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="bg-dark text-white text-center py-4">
         <p class="mb-0">&copy; 2024 Everth Vargas. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+        // Header Animation
+        gsap.from("header", { opacity: 0, duration: 1, y: -50 });
+        
+        // Card Animations
+        gsap.from(".card", {
+            opacity: 0,
+            duration: 1,
+            y: 50,
+            stagger: 0.2,
+            delay: 0.5,
+            ease: "power1.out",
+        });
+        
+        // Footer Animation
+        gsap.from("footer", { opacity: 0, duration: 1, y: 50, delay: 1 });
+        
+        // Skill Bars Animation
+        gsap.from(".skill-progress", {
+            width: 0,
+            duration: 1.5,
+            stagger: 0.3,
+            delay: 0.5,
+            ease: "power2.out",
+        });
+    </script>
 </body>
 </html>
